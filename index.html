@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="quiz-container">
+    <!-- Quiz Selection Screen -->
+    <div id="quiz-selection">
+        <h1>اختر الاختبار</h1>
+        <div class="quiz-cards">
+            <div class="quiz-card" onclick="startQuiz('quiz1')">
+                <img src="images/quiz1.jpg" alt="Quiz 1" class="quiz-card-image">
+                <div class="quiz-card-title">الاختبار 1</div>
+            </div>
+            <div class="quiz-card" onclick="startQuiz('quiz2')">
+                <img src="images/quiz2.jpg" alt="Quiz 2" class="quiz-card-image">
+                <div class="quiz-card-title">الاختبار 2</div>
+            </div>
+            <div class="quiz-card" onclick="startQuiz('quiz3')">
+                <img src="images/quiz3.jpg" alt="Quiz 3" class="quiz-card-image">
+                <div class="quiz-card-title">الاختبار 3</div>
+            </div>
+            <div class="quiz-card" onclick="startQuiz('quiz4')">
+                <img src="images/quiz4.jpg" alt="Quiz 4" class="quiz-card-image">
+                <div class="quiz-card-title">الاختبار 4</div>
+            </div>
+            <!-- Add more quiz cards as needed -->
+        </div>
+    </div>
+    
+
+    <!-- Quiz Container -->
+    <div class="quiz-container" style="display: none;">
         <div class="quiz-header">
             <span class="quiz-title">الاختبار</span>
             <div class="progress-bar">
@@ -25,7 +51,6 @@
                 <div class="option-btn" onclick="selectOption(this)">الخيار 1</div>
                 <div class="option-btn" onclick="selectOption(this)">الخيار 2</div>
                 <div class="option-btn" onclick="selectOption(this)">الخيار 3</div>
-                <div class="option-btn" onclick="selectOption(this)">الخيار 4</div>
             </div>
 
             <div id="feedback" class="feedback"></div>
@@ -33,15 +58,20 @@
 
         <div class="quiz-footer">
             <button id="next-btn" onclick="nextQuestion()">التالي</button>
+            <button id="home-btn" onclick="goToHome()">العودة إلى الصفحة الرئيسية</button>
         </div>
 
-        <div class="results">
+        <div class="results" style="display: none;">
             <div id="score-text"></div>
             <button id="restart-btn" onclick="restartQuiz()">إعادة الاختبار</button>
         </div>
-    </div>
+        
 
-    <script src="quizData.js"></script>
-    <script src="quiz.js"></script>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="quizData.js" defer type="module"></script>
+    <script src="quiz.js" defer type="module"></script>
 </body>
 </html>
