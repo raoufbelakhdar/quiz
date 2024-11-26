@@ -10,7 +10,6 @@ body {
 
 /* Main quiz container */
 .quiz-container {
-    width: 100%;
     max-width: 650px;
     margin: 50px auto;
     background-color: white; /* White background for quiz container */
@@ -173,4 +172,72 @@ body {
 
 #restart-btn:hover {
     background-color: #218838; /* Darker green for hover */
+}
+
+/* Responsive design using media queries */
+@media screen and (max-width: 768px) {
+    .quiz-container {
+        padding: 30px;
+        margin: 20px; /* Reduce margin on smaller screens */
+    }
+
+    .quiz-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quiz-title {
+        font-size: 20px;
+    }
+
+    .question {
+        font-size: 18px;
+    }
+
+    .sentence {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .option-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #next-btn, #restart-btn {
+        padding: 12px 20px;
+    }
+
+    .results {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .quiz-container {
+        padding: 20px;
+        margin: 10px; /* Further reduce margin on very small screens */
+    }
+
+    .quiz-title {
+        font-size: 18px;
+    }
+
+    .question {
+        font-size: 16px;
+    }
+
+    .sentence {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .option-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #next-btn, #restart-btn {
+        padding: 10px 15px;
+    }
 }
