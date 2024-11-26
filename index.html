@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاختبار</title>
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <span class="quiz-title">الاختبار</span>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+
+        <div class="quiz-content">
+            <div class="question" id="question-title"></div>
+            <div class="sentence" id="sentence"></div>
+
+            <div class="choices">
+                <div class="option-btn" onclick="selectOption(this)">الخيار 1</div>
+                <div class="option-btn" onclick="selectOption(this)">الخيار 2</div>
+                <div class="option-btn" onclick="selectOption(this)">الخيار 3</div>
+                <div class="option-btn" onclick="selectOption(this)">الخيار 4</div>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+        </div>
+
+        <div class="quiz-footer">
+            <button id="next-btn" onclick="nextQuestion()">التالي</button>
+        </div>
+
+        <div class="results">
+            <div id="score-text"></div>
+            <button id="restart-btn" onclick="restartQuiz()">إعادة الاختبار</button>
+        </div>
+    </div>
+
+    <script src="quizData.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

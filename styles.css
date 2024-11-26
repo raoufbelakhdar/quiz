@@ -1,0 +1,176 @@
+/* General body styling */
+body {
+    font-family: 'Cairo', sans-serif; /* Using the Cairo font */
+    background-color: #F9D835; /* Yellow background */
+    color: #333;
+    text-align: right; /* Ensure RTL text alignment */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main quiz container */
+.quiz-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 50px auto;
+    background-color: white; /* White background for quiz container */
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Drop shadow for modern look */
+    padding: 40px;
+}
+
+/* Header with quiz title and progress */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.quiz-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-align: right;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Text shadow for modern effect */
+}
+
+/* Progress bar */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #FF4081; /* Red-pink color for progress bar */
+    border-radius: 5px;
+}
+
+/* Main quiz content area */
+.quiz-content {
+    text-align: right; /* RTL text alignment */
+}
+
+/* Question Styling */
+.question {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Styling for the sentence */
+.sentence {
+    font-size: 18px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    font-style: italic;
+    text-align: center;
+    background-color: #F4F4F4; /* Light gray background for the sentence */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Drop shadow for sentence */
+}
+
+/* Choices */
+.choices {
+    margin-bottom: 30px;
+}
+
+.option-btn {
+    display: block;
+    background-color: #F4F4F4; /* Light gray background for options */
+    padding: 15px;
+    margin: 12px 0;
+    font-size: 18px;
+    text-align: right; /* RTL text alignment */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Drop shadow for options */
+}
+
+.option-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.option-btn.selected {
+    background-color: #1D75FF; /* Blue selection color */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on selected option */
+}
+
+.option-btn.correct {
+    background-color: #28a745; /* Green for correct answer */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for correct option */
+}
+
+.option-btn.incorrect {
+    background-color: #dc3545; /* Red for incorrect answer */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for incorrect option */
+}
+
+/* Feedback explanation styling */
+.feedback {
+    font-size: 16px;
+    color: #555;
+    font-style: italic;
+    text-align: right; /* RTL feedback alignment */
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for feedback */
+}
+
+/* Footer and buttons */
+.quiz-footer {
+    margin-top: 40px;
+}
+
+#next-btn {
+    background-color: #1D75FF; /* Blue for the next button */
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for next button */
+}
+
+#next-btn:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+}
+
+/* Results section */
+.results {
+    display: none;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#restart-btn {
+    background-color: #28a745; /* Green for restart button */
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for restart button */
+}
+
+#restart-btn:hover {
+    background-color: #218838; /* Darker green for hover */
+}
